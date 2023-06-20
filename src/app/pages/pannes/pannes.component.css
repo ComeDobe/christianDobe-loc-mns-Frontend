@@ -1,0 +1,72 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-form-field {
+  width: 100%;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+
+
+
+
+/*nav*/
+
+
+
+/*.example-spacer {*/
+/*  flex: 1 1 auto;*/
+/*}*/
+/*mat-form-field {*/
+/*  width: 70%;*/
+/*}*/
+
+.example-spacer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 30%;
+  height: 70px;
+  margin: 10px auto; /* Ajoutez une marge entre les champs de formulaire */
+}
+
+
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.center-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px; /* Ajoutez une marge supérieure si nécessaire */
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

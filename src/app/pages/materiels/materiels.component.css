@@ -1,0 +1,82 @@
+/*.example-spacer {*/
+/*  flex: 1 1 auto;*/
+/*}*/
+
+/*.mat-toolbar {*/
+/*  background-color: #55575a;*/
+/*}*/
+
+/*table {*/
+/*  width: 100%;*/
+/*}*/
+
+/*.mat-mdc-form-field {*/
+/*  font-size: 14px;*/
+/*  width: 100%;*/
+/*}*/
+
+/*td, th {*/
+/*  width: 25%;*/
+/*}*/
+/*.container{*/
+/*  max-width: 1200%;*/
+/*  margin: 0 auto;*/
+/*}*/
+
+
+/*!*body{*!*/
+/*!*  font-family: 'Poppins', sans-serif;*!*/
+/*!*  overflow: hidden;*!*/
+
+/*!*  font-size: 16px;*!*/
+/*!*  font-family: Montserrat,sans-serif;*!*/
+/*!*  background: #323d6f;*!*/
+/*!*  background-color: rgb(90, 99, 135);*!*/
+/*!*  color: #fff;*!*/
+
+/*!*}*!*/
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-form-field {
+  width: 100%;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+
+
+
+
+/*nav*/
+
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-form-field {
+  width: 100%;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}

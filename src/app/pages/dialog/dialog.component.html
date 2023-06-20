@@ -1,0 +1,79 @@
+
+
+<h1 mat-dialog-title> Ajouter un Materiel </h1>
+
+<div mat-dialog-content>
+  <form [formGroup]="productForm">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Identifiant </mat-label>
+      <input formControlName="materielId" matInput placeholder="Identifiant">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Marque </mat-label>
+      <input formControlName="materielMarque" matInput placeholder="Marque">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Reference</mat-label>
+      <input formControlName="materielRef" matInput placeholder="Reference">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Localisation</mat-label>
+      <input formControlName="locId" matInput placeholder="localisation">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Stock</mat-label>
+      <input formControlName="materielQuantite" matInput placeholder="Quantité">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Categorie</mat-label>
+      <input formControlName="typeId" matInput placeholder="Categorie">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Date de Creation</mat-label>
+      <input  formControlName="date"  matInput [matDatepicker]="picker">
+      <!--    <mat-hint>MM/DD/YYYY</mat-hint>-->
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <label for="" > <h1> Etat</h1> </label>
+    <mat-radio-group class="example-radio-group">
+      <mat-radio-button class="example-radio-button" *ngFor="let fresh of freshnessList"  [value]="fresh">
+        {{fresh}}
+
+      </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input formControlName="materielDescription" matInput placeholder="Description">
+    </mat-form-field>
+
+  </form>
+
+</div>
+<div mat-dialog-actions [align]=" 'end'" >
+  <button mat-raised-button color="warn" mat-dialog-close >
+    Fermer
+    <mat-icon matSuffix>backspace</mat-icon>
+  </button>
+  <button  style="margin-left: 8px;" mat-raised-button color="primary" mat-dialog-close   (click)="addMateriel()">
+    Enregistrer
+    <mat-icon matSuffix>save</mat-icon>
+  </button>
+  <!--  <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()" > {{actionBtn}} </button>-->
+</div>
+
+
+
+

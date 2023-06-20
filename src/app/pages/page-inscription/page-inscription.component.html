@@ -1,0 +1,100 @@
+<!--<p>page-inscription works!</p>-->
+
+
+
+<!--<div *ngIf="!connecte">-->
+<!--  <h1>Inscription</h1>-->
+<!--  <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">-->
+<!--    <label>-->
+<!--      Nom :-->
+<!--      <input type="text" formControlName="nom">-->
+<!--      <div *ngIf="inscriptionForm.controls['nom'].invalid && (inscriptionForm.controls['nom'].dirty || inscriptionForm.controls['nom'].touched)">-->
+<!--        <div *ngIf="inscriptionForm.controls['nom'].errors.required">-->
+<!--          Le nom est obligatoire.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <label>-->
+<!--      Prénom :-->
+<!--      <input type="text" formControlName="prenom">-->
+<!--      <div *ngIf="inscriptionForm.controls['prenom'].invalid && (inscriptionForm.controls['prenom'].dirty || inscriptionForm.controls['prenom'].touched)">-->
+<!--        <div *ngIf="inscriptionForm.controls['prenom'].errors.required">-->
+<!--          Le prénom est obligatoire.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <label>-->
+<!--      Adresse :-->
+<!--      <input type="text" formControlName="adresse">-->
+<!--      <div *ngIf="inscriptionForm.controls['adresse'].invalid && (inscriptionForm.controls['adresse'].dirty || inscriptionForm.controls['adresse'].touched)">-->
+<!--        <div *ngIf="inscriptionForm.controls ['adresse'].errors.required">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <label>-->
+<!--      Téléphone :-->
+<!--      <input type="text" formControlName="telephone">-->
+<!--      <div *ngIf="inscriptionForm.controls['telephone'].invalid && (inscriptionForm.controls['telephone'].dirty || inscriptionForm.controls['telephone'].touched)">-->
+<!--        <div *ngIf="inscriptionForm.controls['telephone'].errors.pattern">-->
+<!--          Le numéro de téléphone doit comporter 10 chiffres.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <label>-->
+<!--      Email :-->
+<!--      <input type="email" formControlName="email">-->
+<!--      <div *ngIf="inscriptionForm.controls['email'].invalid && (inscriptionForm.controls['email'].dirty || inscriptionForm.controls['email'].touched)">-->
+<!--        <div *ngIf="inscriptionForm.controls['email'].errors.required">-->
+<!--          L'adresse email est obligatoire.-->
+<!--        </div>-->
+<!--        <div *ngIf="inscriptionForm.controls['email'].errors.email">-->
+<!--          L'adresse email n'est pas valide.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <button type="submit" [disabled]="!inscriptionForm.valid">S'inscrire</button>-->
+<!--  </form>-->
+<!--  <div *ngIf="inscriptionTerminee">-->
+<!--    Merci pour votre inscription !-->
+<!--  </div>-->
+<!--  <hr>-->
+
+
+
+<!--  <h1>Connexion</h1>-->
+<!--  <form [formGroup]="connexionForm" (ngSubmit)="onConnexionSubmit()" *ngIf="!inscriptionTerminee">-->
+<!--    <label>-->
+<!--      Email :-->
+<!--      <input type="email" formControlName="email">-->
+<!--      <div *ngIf="connexionForm.controls['email'].invalid && (connexionForm.controls['email'].dirty || connexionForm.controls['email'].touched)">-->
+<!--        <div *ngIf="connexionForm.controls['email']?.errors?.required">-->
+<!--          L'adresse email est obligatoire.-->
+<!--        </div>-->
+<!--        <div *ngIf="connexionForm.controls['email'].errors.email">-->
+<!--          L'adresse email n'est pas valide.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <label>-->
+<!--      Mot de passe :-->
+<!--      <input type="password" formControlName="motDePasse">-->
+<!--      <div *ngIf="connexionForm.controls['motDePasse'].invalid && (connexionForm.controls['motDePasse'].dirty || connexionForm.controls['motDePasse'].touched)">-->
+<!--        <div *ngIf="connexionForm.controls['motDePasse'].errors.required">-->
+<!--          Le mot de passe est obligatoire.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </label>-->
+<!--    <br>-->
+<!--    <button type="submit" [disabled]="!connexionForm.valid">Se connecter</button>-->
+<!--  </form>-->
+<!--</div>-->
+<!--<div *ngIf="connecte">-->
+<!--  Bienvenue sur la page d'inscription !-->
+<!--</div>-->
+

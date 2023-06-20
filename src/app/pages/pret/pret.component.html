@@ -1,0 +1,56 @@
+
+
+
+<div mat-dialog-title>
+  <button mat-raised-button color="primary">Formulaire de Reservation</button>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Identifiant</mat-label>
+        <input matInput placeholder="Identifiant du Materiel" formControlName="materielId">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Date Debut</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateDebut">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Date Fin</mat-label>
+        <input matInput [matDatepicker]="picker2" formControlName="dateFin">
+        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Quantité</mat-label>
+        <input matInput placeholder="Quantité" formControlName="materielQuantite">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea  placeholder="Motif de Pret" formControlName="pretDescription" matInput></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false">
+      Annuler
+      <mat-icon matSuffix>backspace</mat-icon>
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      Réserver
+      <mat-icon matSuffix>save</mat-icon>
+    </button>
+  </div>
+</form>

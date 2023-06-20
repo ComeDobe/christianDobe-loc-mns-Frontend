@@ -1,0 +1,116 @@
+<!--&lt;!&ndash;<nav class="navbar navbar-expand-lg navbar-dark bg-primary">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="navbar-brand" href="#">Angular + jw</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="collapse navbar-collapse" id="navbarSupportedContent">&ndash;&gt;-->
+<!--&lt;!&ndash;      <ul class="navbar-nav me-auto mb-2 mb-lg-0">&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item" *ngIf="userService.roleMatch(['Admin'])">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link active" aria-current="page" routerLink="/admin">Admin Dashboard</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <li class="nav-item" *ngIf="userService.roleMatch(['User'])">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link active" aria-current="page" routerLink="/user">User Dashboard</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;      </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <button *ngIf="!isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>&ndash;&gt;-->
+<!--&lt;!&ndash;      <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;!&#45;&#45; Ajout du lien bootstrap &ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">&ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;<nav class="navbar navbar-expand-lg navbar-dark bg-primary">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="navbar-brand" href="#">Angular + jw</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="collapse navbar-collapse" id="navbarSupportedContent">&ndash;&gt;-->
+<!--&lt;!&ndash;      <ul class="navbar-nav me-auto mb-2 mb-lg-0">&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li class="nav-item dropdown" *ngIf="userService.roleMatch(['Admin'])">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">&ndash;&gt;-->
+<!--&lt;!&ndash;            Admin Dashboard&ndash;&gt;-->
+<!--&lt;!&ndash;          </a>&ndash;&gt;-->
+<!--&lt;!&ndash;          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a class="dropdown-item" routerLink="/admin">Admin Dashboard</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><hr class="dropdown-divider"></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a class="dropdown-item" routerLink="/users">Manage Users</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;          </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <li class="nav-item dropdown" *ngIf="userService.roleMatch(['User'])">&ndash;&gt;-->
+<!--&lt;!&ndash;          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">&ndash;&gt;-->
+<!--&lt;!&ndash;            User Dashboard&ndash;&gt;-->
+<!--&lt;!&ndash;          </a>&ndash;&gt;-->
+<!--&lt;!&ndash;          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a class="dropdown-item" routerLink="/user">Dashboard</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><hr class="dropdown-divider"></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;          </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;      </ul>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <button *ngIf="!isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>&ndash;&gt;-->
+<!--&lt;!&ndash;      <button *ngIf="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash; Ajout du lien bootstrap &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">&ndash;&gt;-->
+
+
+
+
+
+<!--<mat-toolbar>-->
+<!--  <mat-toolbar-row class="justify-content-between">-->
+<!--    <button mat-icon-button (click)="toggleSidebar()">-->
+<!--      <mat-icon>menu</mat-icon>-->
+<!--    </button>-->
+<!--    <div class="row mr-2 ml-auto">-->
+<!--      <ul class="row m-0 align-items-center">-->
+<!--        <li>-->
+<!--          <button-->
+<!--            mat-button-->
+<!--            [matMenuTriggerFor]="menu"-->
+<!--            class="user mt-2 d-flex align-items-center"-->
+<!--          >-->
+<!--            <img src="./assets/user.jpg" alt="" class="user-image mr-1 p-2" />-->
+
+<!--            User Name-->
+<!--            <mat-icon class="user-image-icon ml-1"-->
+<!--            >keyboard_arrow_down</mat-icon-->
+<!--            >-->
+<!--          </button>-->
+<!--          <mat-menu #menu="matMenu">-->
+<!--            <button mat-menu-item>-->
+<!--              <mat-icon>exit_to_app</mat-icon>-->
+<!--              Logout-->
+<!--            </button>-->
+<!--          </mat-menu>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </mat-toolbar-row>-->
+<!--</mat-toolbar>-->

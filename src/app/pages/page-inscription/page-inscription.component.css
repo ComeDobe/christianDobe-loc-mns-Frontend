@@ -1,0 +1,65 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="submit"],
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:disabled,
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+}
+
+div.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+div.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.page-inscription {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}

@@ -1,0 +1,88 @@
+
+<!--<mat-toolbar color="primary">-->
+<!--&lt;!&ndash;  <h1>Bienvenu sur la page d'enregistrement d'utilisateur</h1>&ndash;&gt;-->
+<!--  <span class="example-spacer"></span>-->
+<!--&lt;!&ndash;  <button routerLink="/pannelist" mat-raised-button color="warn">Liste des Materiels en Panne</button>&ndash;&gt;-->
+<!--</mat-toolbar>-->
+
+<div class="logo text-center">
+  <img width="300" src="assets/gymlogo.png" alt="">
+</div>
+
+
+<div class="container mt-5">
+  <div class="card text-center" style="color: green; padding: 20px;">
+    <h1> BIENVENU SUR CETTE PAGE DE DECLARATION DE PANNE </h1>
+  </div>
+</div>
+
+
+<!--<div class="example-spacer" >-->
+<!--  <button mat-raised-button style="height: 60px">-->
+<!--    <h1> BIENVENU SUR CETTE PAGE DE DECLARATION DE PANNE</h1>-->
+<!--  </button>-->
+<!--</div>-->
+<br><br><br>
+
+<!--          <div class="example-spacer" >-->
+<!--            <button mat-raised-button style="height: 50px" color="primary">-->
+<!--              <h1> VEUILLEZ REMPLIR CE FORMULAIRE</h1>-->
+<!--            </button>-->
+<!--          </div>-->
+
+<div class="registration-form m-3 p-4">
+  <form [formGroup]="registrationForm">
+    <div class="row">
+<
+      <div class="example-spacer">
+        <mat-form-field appearance="outline">
+          <mat-label>Description de la panne </mat-label>
+          <input formControlName="panneDescription" matInput placeholder="Decrire l'etat du materiel">
+          <mat-icon matSuffix>handyman</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="example-spacer">
+        <mat-form-field appearance="outline">
+          <mat-label>Ajouter une photo</mat-label>
+          <input type="text" matInput [value]="file?.name"  readonly placeholder="Aucun fichier sélectionné">
+          <input #fileSelector type="file" style="display: none" (change)="onFileSelected($event)">
+
+          <button mat-button matSuffix mat-stroked-button color="warn" (click)="fileSelector.click()">Choisir un fichier</button>
+        </mat-form-field>
+      </div>
+
+
+      <div class="example-spacer">
+        <mat-form-field appearance="outline">
+          <mat-label>Identifiant du materiel</mat-label>
+          <input type="text" formControlName="materielId" matInput placeholder="Exemple 10">
+          <mat-icon matSuffix>computer</mat-icon>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="center-buttons">
+      <button *ngIf="!isUpdateActive" (click)="submit()"  style="margin-right: 15px; font-size: 1.2em; width: 200px; " mat-raised-button color="primary">
+        Enregistrer
+        <mat-icon matSuffix>save</mat-icon>
+      </button>
+
+      <button  *ngIf="!isUpdateActive" (click)="submit()"  style="margin-left: 15px; font-size: 1.2em; width: 200px;" mat-raised-button color="warn" >
+        Annuler
+        <mat-icon matSuffix>backspace</mat-icon>
+      </button>
+    </div>
+    <br><br><br>
+
+    <div >
+      <button routerLink="/pannelist" mat-raised-button color="primary">
+        Liste des Materiels en Panne
+        <mat-icon matSuffix>receipt long </mat-icon>
+      </button>
+    </div>
+
+  </form>
+</div>
+

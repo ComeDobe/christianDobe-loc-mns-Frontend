@@ -1,0 +1,98 @@
+<!--<mat-toolbar color="primary">-->
+<!--&lt;!&ndash;  <h1>Bienvenu sur la page d'enregistrement d'utilisateur</h1>&ndash;&gt;-->
+<!--  <span class="example-spacer"></span>-->
+<!--  <button routerLink="/list" mat-raised-button color="warn">Voir la listes des utilisateurs</button>-->
+<!--</mat-toolbar>-->
+
+<mat-toolbar color="primary>">
+  <div>
+    <button routerLink="/list" mat-raised-button color="primary">Voir la listes des utilisateurs
+      <mat-icon matSuffix>receipt long</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="logo text-center">
+  <img width="300" src="assets/gymlogo.png" alt="">
+</div>
+
+<div class="registration-form m-3 p-4">
+  <form [formGroup]="registrationForm">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Nom</mat-label>
+          <input formControlName="userFirstName" matInput placeholder="Eric">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Prenom</mat-label>
+          <input formControlName="userLastName" matInput placeholder="Dupont">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input formControlName="userEmail" matInput placeholder="email">
+          <mat-icon matSuffix>mail_outline</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Telephone</mat-label>
+          <input type="number" formControlName="userMobile" matInput placeholder="mobile">
+          <mat-icon matSuffix>mobile_screen_share</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Login</mat-label>
+          <input type="text" formControlName="userName" matInput placeholder="christ">
+          <mat-icon matSuffix>account_circle</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Adresse</mat-label>
+          <input type="text" formControlName="userAdresse" matInput placeholder="Rue aux Arenes">
+          <mat-icon matSuffix>perm_contact_calendar</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" formControlName="userPassword" matInput placeholder="*****">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Ville</mat-label>
+          <input type="text" formControlName="userCity" matInput placeholder="Strasbourg">
+          <mat-icon matSuffix>location_on</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Date de Creation</mat-label>
+          <input formControlName="userDate" matInput [matDatepicker]="picker">
+<!--          <mat-hint>MM/DD/YYYY</mat-hint>-->
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <button *ngIf="!isUpdateActive" (click)="submit()" mat-raised-button color="warn">Enregistrer</button>
+    <button *ngIf="isUpdateActive" (click)="updateUser()" mat-raised-button color="primary">Modifier</button>
+  </form>
+</div>
+

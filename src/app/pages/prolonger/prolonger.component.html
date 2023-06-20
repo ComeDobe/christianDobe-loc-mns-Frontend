@@ -1,0 +1,52 @@
+
+
+
+
+<div mat-dialog-title>
+  <button mat-raised-button color="primary">Formulaire de Prolongement</button>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Identifiant</mat-label>
+        <input matInput placeholder="Identifiant du Materiel" formControlName="materielId">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Identifiant du Pret</mat-label>
+        <input matInput placeholder="Identifiant du Pret" formControlName="pretId">
+      </mat-form-field>
+    </div>
+
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Nouvelle Date de Fin</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="nouvelleDateFin">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea  placeholder="Motif du prolongement " formControlName="pretDescription" matInput></textarea>
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false">
+      Annuler
+      <mat-icon matSuffix>backspace</mat-icon>
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      Prolonger
+      <mat-icon matSuffix>save</mat-icon>
+    </button>
+  </div>
+</form>
