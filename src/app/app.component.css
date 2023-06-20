@@ -1,0 +1,33 @@
+/*:host {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  height: 100%;*/
+/*}*/
+
+/*mat-drawer {*/
+/*  width: 260px;*/
+/*}*/
+/*mat-drawer-container {*/
+/*  height: 100%;*/
+/*}*/
+
+/*mat-drawer {*/
+/*  background: #1a3d8e;*/
+/*}*/
+
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 260px;
+  background: #1a3d8e;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
