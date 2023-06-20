@@ -1,15 +1,3 @@
-// // import { Component } from '@angular/core';
-// //
-// // @Component({
-// //   selector: 'app-pret',
-// //   templateUrl: './pret.component.html',
-// //   styleUrls: ['./pret.component.css']
-// // })
-// // export class PretComponent {
-// //
-// // }
-//
-//
 
 
 
