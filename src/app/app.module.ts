@@ -65,6 +65,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PannesComponent } from './pages/pannes/pannes.component';
 import { PannesListComponent } from './pages/pannes-list/pannes-list.component';
 import { ProlongerComponent } from './pages/prolonger/prolonger.component';
+// import { Calendar, CalendarOptions } from '@fullcalendar/angular';
+// import { CustomRendering } from '@fullcalendar/core/internal';
+
 
 
 

@@ -1,12 +1,3 @@
-// import { Injectable } from '@angular/core';
-//
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AdminService {
-//
-//   constructor() { }
-// }
 
 
 import { Injectable } from '@angular/core';
@@ -17,6 +8,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AdminService {
   private baseUrl = 'http://localhost:9090/materiels'; // Remplacez par l'URL de votre API
 
