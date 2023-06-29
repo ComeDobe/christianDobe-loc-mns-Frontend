@@ -3,6 +3,9 @@ FROM node:12.7-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install --no-cache
+
+RUN npm install -g npm@latest
+
 COPY . .
 RUN npm run build --prod
 
