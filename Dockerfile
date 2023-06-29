@@ -50,7 +50,7 @@
 
 
 # Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
-FROM node:12.7-alpine AS build
+FROM node:14-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN rm -rf node_modules && npm install --no-cache
