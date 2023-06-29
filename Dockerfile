@@ -1,18 +1,18 @@
-# Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
-FROM node:12.7-alpine AS build
-WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install --no-cache
-
-RUN npm install -g npm@latest
-
-COPY . .
-RUN npm run build --prod
-
-# Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
-FROM nginx:1.17.1-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+## Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
+#FROM node:12.7-alpine AS build
+#WORKDIR /app
+#COPY package.json package-lock.json ./
+#RUN npm install --no-cache
+#
+#RUN npm install -g npm@latest
+#
+#COPY . .
+#RUN npm run build --prod
+#
+## Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
+#FROM nginx:1.17.1-alpine
+#COPY --from=build /app/dist /usr/share/nginx/html
+#COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
 
 #***************************************************************************************************************
 
@@ -45,3 +45,19 @@ COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
 #FROM nginx:1.21.3-alpine
 #COPY --from=build /app/dist /usr/share/nginx/html
 #COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+
+#******************************************************************************************************
+
+
+# Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
+FROM node:12.7-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN rm -rf node_modules && npm install --no-cache
+COPY . .
+RUN npm run build --prod
+
+# Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
+FROM nginx:1.17.1-alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
