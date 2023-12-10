@@ -19,7 +19,8 @@ import { Location } from '@angular/common';
 export class MaterielsComponent implements OnInit {
   title = 'testprojet';
 
-  displayedColumns: string[] = ['materielId', 'materielMarque', 'materielRef', 'locId','typeId','date' ,'materielQuantite', 'materielDescription', 'action'];
+  displayedColumns: string[] = ['materielId', 'materielMarque', 'materielRef',
+    'locId','typeId','date' ,'materielQuantite', 'materielDescription', 'action'];
 
   dataSource!: MatTableDataSource<any>;
 
@@ -27,7 +28,8 @@ export class MaterielsComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
   router: any;
 
-  constructor(private dialog: MatDialog, private api: ApiService, private location: Location) {}
+  constructor(private dialog: MatDialog, private api: ApiService,
+              private location: Location) {}
 
   ngOnInit() {
     this.getAllMateriels();

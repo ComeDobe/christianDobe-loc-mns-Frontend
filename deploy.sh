@@ -2,10 +2,10 @@
 # Mettre à jour le code source
 git pull
 # Construire l'image Docker
-docker build --no-cache -t image-application .
+docker build --no-cache -t image-testprojet .
 # Arreter le conteneur existant
-docker stop conteneur-application
+docker stop conteneur-testprojet
 # Supprimer le conteneur existant
-docker rm conteneur-application
+docker rm conteneur-testprojet
 # Lancer un nouveau conteneur
-docker run -d --name=conteneur-application -p 4200:80 image-application
+docker run -d --name=conteneur-testprojet -p 4200:80 image-testprojet

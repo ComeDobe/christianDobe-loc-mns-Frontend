@@ -14,14 +14,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
-
-
 <!--<body style="background-color: rgb(21,27,54);">-->
 <!-- <img class="wave" src="img/wave.png">-->
 <body >
-
-
-
 <div class="container"  style=  " width: 400vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
 <!--  style="background-image: url('../../../assets/ifa.svg');-->
   <div class="img">
@@ -29,24 +24,15 @@
   </div>
   <div class="login-content">
     <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-<!--      <img src="../../../assets/avatar.svg">-->
-
-<!--      <img src="../../../assets/mns.svg"   >-->
-
       <div style="width: 23vw; height: 20vh; display: flex; justify-content: center; align-items: center;">
         <img src="../../../assets/avatar.svg" style="width: 200%; height:80%;" />
       </div>
-
-
-
-
       <h2 class="title">BIENVENUE</h2>
       <div class="input-div one">
         <div class="i">
           <i class="fas fa-user"></i>
         </div>
         <div class="div">
-<!--          <h5>LOGIN</h5>-->
           <input type="text" class="input" name="userName" ngModel>
         </div>
       </div>
@@ -55,22 +41,19 @@
           <i class="fas fa-lock"></i>
         </div>
         <div class="div">
-<!--          <h5>PASSWORD</h5>-->
-<!--          <i class="fa fa-key"></i>-->
           <input type="password" class="input" name="userPassword" ngModel>
-
         </div>
       </div>
       <a routerLink="/inscription">S'INSCRIRE</a>
-
       <button type="submit" class="btn">LOGIN</button>
     </form>
   </div>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
-
 <script>
+
+
+
   const inputs = document.querySelectorAll(".input");
 
 

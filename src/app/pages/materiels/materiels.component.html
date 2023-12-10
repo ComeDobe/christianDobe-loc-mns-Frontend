@@ -16,16 +16,6 @@
   <button mat-raised-button color="primary"  (click)="openDialog()"   >Ajouter un Materiel</button>
 </mat-toolbar>
 
-<!--<mat-toolbar color="primary">-->
-<!--  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
-<!--    <mat-icon>supervised_user_circle</mat-icon>-->
-<!--  </button>-->
-<!--  <span>LOC MNS</span>-->
-<!--  <span class="example-spacer"></span>-->
-<!--  <button mat-raised-button color="warn"  (click)="openDialog()">Ajouter un Materiel</button>-->
-
-<!--</mat-toolbar>-->
-
 <div class="container">
   <div style="margin-top: 10px">
     <mat-form-field>
@@ -41,26 +31,22 @@
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Identifiant </th>
           <td mat-cell *matCellDef="let row"> {{row.materielId}} </td>
         </ng-container>
-
         <!-- Progress Column -->
         <ng-container matColumnDef="materielMarque">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Marque </th>
 <!--          <td mat-cell *matCellDef="let row"> {{row.materielMarque}}% </td>-->
           <td mat-cell *matCellDef="let row"> {{row.materielMarque.replace('%', '')}} </td>
         </ng-container>
-
         <!-- Fruit Column -->
         <ng-container matColumnDef="materielRef">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Reference </th>
           <td mat-cell *matCellDef="let row"> {{row.materielRef}} </td>
         </ng-container>
-
         <!-- Name Column -->
         <ng-container matColumnDef="date">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>  Date</th>
           <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
         </ng-container>
-
 
         <!-- Fruit Column -->
         <ng-container matColumnDef="materielDescription">
