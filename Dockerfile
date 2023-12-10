@@ -1,63 +1,11 @@
-## Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
-#FROM node:12.7-alpine AS build
-#WORKDIR /app
-#COPY package.json package-lock.json ./
-#RUN npm install --no-cache
-#
-#RUN npm install -g npm@latest
-#
-#COPY . .
-#RUN npm run build --prod
-#
-## Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
-#FROM nginx:1.17.1-alpine
-#COPY --from=build /app/dist /usr/share/nginx/html
-#COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
-
-#***************************************************************************************************************
-
-## Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
-#FROM node:12.18.1-alpine AS build
-#WORKDIR /app
-#COPY package.json package-lock.json ./
-#RUN rm -rf node_modules
-#RUN npm install --legacy-peer-deps
-#COPY . .
-#RUN npm run build --prod
-#
-## Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
-#FROM nginx:1.21.3-alpine
-#COPY --from=build /app/dist /usr/share/nginx/html
-#COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
-
-#*******************************************************************************************************************
-
-## Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
-#FROM node:12.18.1-alpine AS build
-#WORKDIR /app
-#COPY package.json package-lock.json ./
-#RUN rm -rf node_modules
-#RUN npm install --legacy-peer-deps
-#COPY . .
-#RUN npm run build --prod
-#
-## Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
-#FROM nginx:1.21.3-alpine
-#COPY --from=build /app/dist /usr/share/nginx/html
-#COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
-
-#******************************************************************************************************
-
-
-# Étape 1, basée sur Node.js pour construire et compiler l'application Angular.
-FROM node:14-alpine AS build
+# Étape 1, basée sur Node.js pour construire et compiler l'application Angular
+FROM node:18.10-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN rm -rf node_modules && npm install --no-cache
+RUN npm install
 COPY . .
-RUN npm run build --prod
-
+RUN npm run build
 # Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
 FROM nginx:1.17.1-alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/testprojet /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
