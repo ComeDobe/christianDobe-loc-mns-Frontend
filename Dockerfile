@@ -2,7 +2,7 @@
 FROM node:18.10-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 # Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
