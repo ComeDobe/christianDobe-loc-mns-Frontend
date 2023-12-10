@@ -6,7 +6,7 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # Augmenter la limite de mémoire pour la commande de construction
-RUN NODE_OPTIONS=--max_old_space_size=4096 npm run build
+RUN NODE_OPTIONS=--max_old_space_size=8192 npm run build
 
 # Étape 2, basée sur Nginx pour avoir uniquement le contenu compilé pour servir avec Nginx
 FROM nginx:1.17.1-alpine
