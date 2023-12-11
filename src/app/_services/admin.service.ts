@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 
 export class AdminService {
-  private baseUrl = 'http://localhost:9090/materiels'; // Remplacez par l'URL de votre API
+  private baseUrl = 'http://localhost:9090/materiels';
 
   constructor(private http: HttpClient) { }
 
