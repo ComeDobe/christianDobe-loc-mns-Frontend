@@ -2,7 +2,7 @@
 FROM node:18.17.1-alpine AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build
 
 # Étape de serve
