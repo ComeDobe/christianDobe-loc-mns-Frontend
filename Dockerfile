@@ -1,5 +1,5 @@
 # Étape de build
-FROM node:18.17.1-alpine AS build
+FROM node:18.17.1 AS build
 WORKDIR /app
 # Copiez d'abord les fichiers de dépendances pour tirer parti de la mise en cache des couches Docker
 COPY package*.json ./
