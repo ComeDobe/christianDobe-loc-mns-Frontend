@@ -6,6 +6,7 @@ COPY package*.json ./
 RUN npm install --legacy-peer-deps
 # Copiez le reste des fichiers sources du projet Angular
 COPY . .
+ENV NODE_OPTIONS="--max_old_space_size=4096"
 # Construisez l'application pour la production
 RUN npm run build
 # Étape de serve avec Nginx
