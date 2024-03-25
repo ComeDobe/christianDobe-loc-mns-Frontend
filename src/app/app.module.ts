@@ -3,7 +3,6 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,10 +18,6 @@ import { AuthGuard } from './_auth/auth.guard';
 import { AuthInterceptor } from './_auth/auth.interceptor';
 import { UserService } from './_services/user.service';
 import { DialogComponent } from './pages/dialog/dialog.component';
-
-
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -40,8 +35,6 @@ import {MatSortModule} from '@angular/material/sort';
 import {MaterielsComponent} from "./pages/materiels/materiels.component";
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidenavComponent } from './pages/sidenav/sidenav.component';
-
-
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -52,8 +45,6 @@ import {FullCalendarModule} from "@fullcalendar/angular";
 import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 import { RegistrationListComponent } from './pages/registration-list/registration-list.component';
 import { CreateRegistrationComponent } from './pages/create-registration/create-registration.component';
-
-
 import { NgToastModule } from 'ng-angular-popup';
 import { NgConfirmModule } from 'ng-confirm-box';
 import { MatChipsModule } from '@angular/material/chips';
@@ -65,12 +56,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PannesComponent } from './pages/pannes/pannes.component';
 import { PannesListComponent } from './pages/pannes-list/pannes-list.component';
 import { ProlongerComponent } from './pages/prolonger/prolonger.component';
-// import { Calendar, CalendarOptions } from '@fullcalendar/angular';
-// import { CustomRendering } from '@fullcalendar/core/internal';
-
-
-
-
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -129,10 +114,6 @@ import { ProlongerComponent } from './pages/prolonger/prolonger.component';
     MatChipsModule,
     MatCardModule,
     MatSnackBarModule
-
-
-
-
   ],
   providers: [
     AuthGuard,

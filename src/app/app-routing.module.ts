@@ -26,7 +26,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: AdminComponent, canActivate:[AuthGuard], data:{roles:['Admin']} },
   // { path: 'user', component: UserComponent, canActivate:[AuthGuard], data:{roles:['User','Admin']} } ,
-
   {
     path: 'user',
     canActivate: [AuthGuard],
@@ -44,19 +43,6 @@ const routes: Routes = [
       }
     ]
   },
-
-
-  // {
-  //   path: 'materiels',
-  //   component: MaterielsComponent,
-  //   canActivate: [AuthGuard],
-  //   data: { roles: ['Admin'] }
-  // },
-
-  // { path: 'user', component: SidenavComponent, canActivate:[AuthGuard], data:{roles:['User']} } ,
-   // { path: 'user', component: DashboardComponent, canActivate:[AuthGuard], data:{roles:['User']} } ,
-  // { path: 'admin', component: UserComponent, canActivate:[AuthGuard], data:{roles:['Admin']} },
-
 
   { path: 'login', component: LoginComponent },
   { path: 'forbidden', component: ForbiddenComponent },
@@ -79,7 +65,6 @@ const routes: Routes = [
   {path: 'pret', component: PretComponent}
 
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -10,20 +10,6 @@ export class UserService {
   getCurrentUser(): User {
       throw new Error('Method not implemented.');
   }
-  // getCurrentUser(): User {
-  //     throw new Error('Method not implemented.');
-  // }
-  // getCurrentUser(): import("../models/register.model").User {
-  //     throw new Error('Method not implemented.');
-  // }
-
-  // getCurrentUser() {
-  //   // Récupérer l'ID de l'utilisateur actuel à partir du service UserAuthService
-  //   const userName = this.userAuthService.getUserName();
-  //
-  //   // Effectuer une requête HTTP GET pour récupérer les informations de l'utilisateur
-  //   return this.httpclient.get<User>(`${this.PATH_OF_API}/users/${userName}`);
-  // }
 
   isAdmin() {
       throw new Error('Method not implemented.');

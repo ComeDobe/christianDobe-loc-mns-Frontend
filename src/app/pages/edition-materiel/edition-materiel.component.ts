@@ -1,14 +1,14 @@
-// // import { Component } from '@angular/core';
-// //
-// // @Component({
-// //   selector: 'app-edition-materiel',
-// //   templateUrl: './edition-materiel.component.html',
-// //   styleUrls: ['./edition-materiel.component.css']
-// // })
-// // export class EditionMaterielComponent {
-// //
-// // }
-//
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-edition-materiel',
+  templateUrl: './edition-materiel.component.html',
+  styleUrls: ['./edition-materiel.component.css']
+})
+export class EditionMaterielComponent {
+
+}
+
 // import { Component, Input } from '@angular/core';
 // import { MatDialogRef } from '@angular/material/dialog';
 // import { Materiel } from '../models/materiel.model';

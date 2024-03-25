@@ -44,7 +44,6 @@ export class AuthInterceptor implements HttpInterceptor {
     );
   }
 
-
   private addToken(request:HttpRequest<any>, token:string) {
       return request.clone(
           {
@@ -60,41 +59,3 @@ export class AuthInterceptor implements HttpInterceptor {
 
 
 
-
-// cette methode marche egalement
-
-
-
-// import { Injectable } from '@angular/core';
-// import {
-//   HttpInterceptor,
-//   HttpRequest,
-//   HttpHandler,
-//   HttpEvent,
-// } from '@angular/common/http';
-// import { Observable } from 'rxjs';
-// import { UserAuthService } from '../_services/user-auth.service';
-//
-// @Injectable()
-// export class AuthInterceptor implements HttpInterceptor {
-//   constructor(private authService: UserAuthService) {}
-//
-//   intercept(
-//     req: HttpRequest<any>,
-//     next: HttpHandler
-//   ): Observable<HttpEvent<any>> {
-//     const token = this.authService.getToken();
-//     if (token !== null) {
-//       req = this.addToken(req, token);
-//     }
-//     return next.handle(req);
-//   }
-//
-//   private addToken(req: HttpRequest<any>, token: string): HttpRequest<any> {
-//     return req.clone({
-//       setHeaders: {
-//         Authorization: `Bearer ${token}`,
-//       },
-//     });
-//   }
-// }

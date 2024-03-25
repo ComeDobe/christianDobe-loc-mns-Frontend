@@ -10,16 +10,12 @@ import { UserService } from '../../_services/user.service';
   styleUrls: ['./login.component.css'],
 })
 
-
-
-
 export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private userAuthService: UserAuthService,
     private router: Router
   ) {}
-
   ngOnInit(): void {}
 
   login(loginForm: NgForm) {
@@ -29,20 +25,11 @@ export class LoginComponent implements OnInit {
         this.userAuthService.setToken(response.jwtToken);
 
         const role = response.user.role[0].roleName;
-        // if (role === 'Admin') {
-        //   this.router.navigate(['/admin']);
-        // } else {
           this.router.navigate(['/user']);
-        // }
       },
       (error) => {
         console.log(error);
       }
     );
   }
-
-  // logout() {
-  //   this.userAuthService.logout();
-  //   this.router.navigate(['/login']);
-  // }
 }
