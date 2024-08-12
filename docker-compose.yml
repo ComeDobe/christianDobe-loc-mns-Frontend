@@ -1,15 +1,15 @@
-version: '3.3'
-services:
-  frontend:
-    image: frontendlocmns
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "80:80"
-    networks:
-      - backend-net
-
-networks:
-  backend-net:
-    external: true
+#version: '3.3'
+#services:
+#  frontend:
+#    image: frontendlocmns
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - "80:80"
+#    networks:
+#      - backend-net
+#
+#networks:
+#  backend-net:
+#    external: true
