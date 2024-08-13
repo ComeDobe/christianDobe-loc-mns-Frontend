@@ -25,8 +25,8 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 COPY --from=build /app/dist/testprojet .
 
-# Copier la configuration personnalisée de Nginx
-COPY ./nginx.conf /etc/nginx/nginx.conf
+# Copier la configuration personnalisée de Nginx si présente
+COPY ./nginx-custom.conf /etc/nginx/nginx.conf
 
 # Exposer le port 80 pour le trafic HTTP
 EXPOSE 80
