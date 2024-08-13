@@ -19,6 +19,7 @@ RUN rm -rf ./*
 COPY --from=build /app/dist/testprojet .
 # Copier la configuration personnalisée de Nginx
 COPY ./nginx.conf /etc/nginx/nginx.conf
+RUN nginx -t
 # Exposer le port 80 pour le trafic HTTP
 EXPOSE 80
 # Commande pour démarrer Nginx en premier plan
