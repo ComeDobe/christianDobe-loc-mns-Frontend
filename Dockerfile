@@ -23,7 +23,7 @@ WORKDIR /usr/share/nginx/html
 
 # Supprimer les fichiers par défaut de Nginx et copier les fichiers de build Angular
 RUN rm -rf ./*
-COPY --from=build /app/dist/Front .
+COPY --from=build /app/dist/testprojet .
 
 # Copier la configuration personnalisée de Nginx si présente
 COPY ./nginx-custom.conf /etc/nginx/nginx.conf
