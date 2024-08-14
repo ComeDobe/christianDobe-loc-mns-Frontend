@@ -33,7 +33,6 @@ RUN ls -la /usr/share/nginx/html
 
 # Copier la configuration personnalisée de Nginx si présente
 COPY ./nginx-custom.conf /etc/nginx/nginx.conf
-
 # Exposer le port 80 pour le trafic HTTP
 EXPOSE 80
 # Commande pour démarrer Nginx en premier plan
