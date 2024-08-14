@@ -36,6 +36,5 @@ COPY ./nginx-custom.conf /etc/nginx/nginx.conf
 
 # Exposer le port 80 pour le trafic HTTP
 EXPOSE 80
-
 # Commande pour démarrer Nginx en premier plan
 CMD ["nginx", "-g", "daemon off;"]
