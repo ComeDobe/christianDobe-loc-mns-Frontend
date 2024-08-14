@@ -17,6 +17,9 @@ ENV NODE_OPTIONS="--max_old_space_size=4096"
 # Construire l'application Angular pour la production
 RUN npm run build
 
+# Afficher le contenu du dossier dist pour le débogage
+RUN ls -la /app/dist
+
 # Étape de serve avec Nginx
 FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html
@@ -24,6 +27,9 @@ WORKDIR /usr/share/nginx/html
 # Supprimer les fichiers par défaut de Nginx et copier les fichiers de build Angular
 RUN rm -rf ./*
 COPY --from=build /app/dist/testprojet .
+
+# Afficher le contenu du dossier HTML pour le débogage
+RUN ls -la /usr/share/nginx/html
 
 # Copier la configuration personnalisée de Nginx si présente
 COPY ./nginx-custom.conf /etc/nginx/nginx.conf
